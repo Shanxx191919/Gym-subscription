@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #111;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-container {
+    display: flex;
+    padding: 30px 70px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 20px;
+    gap: 60px;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    flex: 1;
+    color: white;
+    display: flex;
+}
+
+.logo span {
+    display: inline-block;
+    animation: wave 1s ease-in-out forwards;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo span:nth-child(1) { animation-delay: 0s; }
+.logo span:nth-child(2) { animation-delay: 0.1s; }
+.logo span:nth-child(3) { animation-delay: 0.2s; }
+.logo span:nth-child(4) { animation-delay: 0.3s; }
+.logo span:nth-child(5) { animation-delay: 0.4s; }
+.logo span:nth-child(6) { animation-delay: 0.5s; }
+.logo span:nth-child(7) { animation-delay: 0.6s; }
+.logo span:nth-child(8) { animation-delay: 0.7s; }
+.logo span:nth-child(9) { animation-delay: 0.8s; }
+.logo span:nth-child(10) { animation-delay: 0.9s; }
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+        color: white;
+    }
+    50% {
+        transform: translateY(-10px);
+        color: rgb(55, 255, 55);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    transition: all 300ms ease;
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+}
+
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 70px;
+    position: relative;
+}
+
+.main-section p {
+    font-weight: 500;
+}
+
+.text-container {
+    max-width: 50%;
+    z-index: 1;
+}
+
+.text-container h1.outlined-text {
+    font-size: 50px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.text-container h1.highlight-text {
+    font-size: 90px;
+    color: #37ff37;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    color: #ccc;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #37ff37;
+    border-radius: 5px;
+    width: 300px;
+    color: rgb(252, 252, 252);
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 300ms ease;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.cta-button a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.cta-nav-button {
+    padding: 10px 20px;
+    background-color: #37ff37;
+    border-radius: 5px;
+    transition: background-color 300ms ease;
+    color: black;
+}
+
+.cta-nav-button:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(170deg, black 70%, limegreen 30%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+}
